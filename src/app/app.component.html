@@ -12,19 +12,15 @@
 
   <!-- CALENDER HEADER -->
   <div class="d-flex justify-content-center">
-    <div class="me-4" (click)="previousWeek()">Previous</div>
+    <div class="me-4" (click)="previousWeek()"><</div>
     <!-- <input type="date" class="border-0 fw-bold" [(ngModel)]="selectedDate" (change)="updateGrid()" /> -->
       <div class="form-group">
         <div class="text-center">
           <span (click)="d.toggle()" class="fw-bold ms-0">{{headerDate}}</span>
-          <input class="form-control border-0 fw-bold text-center custom-input"
-                 name="dp" [(ngModel)]="timePickerDate" [placement]="['bottom']" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (dateSelect)="updateGrid()">
-          <!-- <div class="input-group-append">
-            <button class="btn fw-bold border-0" (click)="d.toggle()" type="button"> {{headerDate}}</button>
-          </div> -->
+          <input class="form-control border-0 fw-bold text-center custom-input" name="dp" [(ngModel)]="timePickerDate" [placement]="['bottom']" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (dateSelect)="updateGrid()">
         </div>
       </div>
-    <div class="ms-4" (click)="nextWeek()">Next</div>
+    <div class="ms-4" (click)="nextWeek()">></div>
   </div>
 
   <!-- CALENDER VIEW -->
@@ -35,7 +31,7 @@
     </div>
 
   <div class="row " *ngFor="let time of times; let i = index">
-    <div class="col border-0 text-center" style="height: 40px" id="" [ngClass]="">{{ i % 2 === 0 ? time.time : '' }}</div>
+    <div class="col border-0 text-center" style="height: 40px" id="" >{{ i % 2 === 0 ? time.time : '' }}</div>
     <div class="col border border-bottom-0 custom-border" style="height: 40px" id="{{dates[0].dateId + time.timeId}}"></div>
     <div class="col border border-bottom-0 custom-border" style="height: 40px" id="{{dates[1].dateId + time.timeId}}"></div>
     <div class="col border border-bottom-0 custom-border" style="height: 40px" id="{{dates[2].dateId + time.timeId}}"></div>

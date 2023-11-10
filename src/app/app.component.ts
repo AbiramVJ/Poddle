@@ -24,94 +24,214 @@ headerDate:any =null;
   times:any[]=[
     {
       id: 0,
-      time: '8:00 AM',
-      timeId: '800'
-    },
-    {
-      id: 1,
-      time: '8:30 AM',
-      timeId: '830'
-    },
-    {
-      id: 2,
-      time: '9:00 AM',
-      timeId: '900'
-    },
-    {
-      id: 3,
-      time: '9:30 AM',
-      timeId: '930'
-    },
-    {
-      id: 4,
-      time: '10:00 AM',
-      timeId: '1000'
-    },
-    {
-      id: 5,
-      time: '10:30 AM',
-      timeId: '1030'
-    },
-    {
-      id: 6,
-      time: '11:00 AM',
-      timeId: '1100'
-    },
-    {
-      id: 7,
-      time: '11:30 AM',
-      timeId: '1130'
-    },
-    {
-      id: 8,
       time: '12:00 AM',
       timeId: '1200'
     },
     {
-      id: 9,
+      id: 1,
       time: '12:30 AM',
       timeId: '1230'
     },
     {
-      id: 10,
-      time: '01:00 PM',
+      id: 2,
+      time: '01:00 AM',
       timeId: '0100'
     },
     {
-      id: 11,
-      time: '01:30 PM',
+      id: 3,
+      time: '01:30 AM',
       timeId: '0130'
     },
     {
-      id: 12,
-      time: '02:00 PM',
+      id: 4,
+      time: '02:00 AM',
       timeId: '0200'
     },
     {
-      id: 13,
-      time: '02:30 PM',
+      id: 5,
+      time: '02:30 AM',
       timeId: '0230'
     },
     {
-      id: 14,
-      time: '03:00 PM',
+      id: 6,
+      time: '03:00 AM',
       timeId: '0300'
     },
     {
-      id: 15,
-      time: '03:30 PM',
+      id: 7,
+      time: '03:30 AM',
       timeId: '0330'
     },
     {
-      id: 16,
-      time: '04:00 PM',
+      id: 8,
+      time: '04:00 AM',
       timeId: '0400'
     },
     {
-      id: 17,
-      time: '04:30 PM',
+      id: 9,
+      time: '04:30 AM',
       timeId: '0430'
     },
+    {
+      id: 10,
+      time: '05:00 AM',
+      timeId: '0500'
+    },
+    {
+      id: 11,
+      time: '05:30 AM',
+      timeId: '0530'
+    },
+    {
+      id: 12,
+      time: '06:00 AM',
+      timeId: '0600'
+    },
+    {
+      id: 13,
+      time: '06:30 AM',
+      timeId: '0630'
+    },
+    {
+      id: 14,
+      time: '07:00 AM',
+      timeId: '0700'
+    },
+    {
+      id: 15,
+      time: '07:30 AM',
+      timeId: '0730'
+    },
+    {
+      id: 16,
+      time: '08:00 AM',
+      timeId: '0800'
+    },
+    {
+      id: 18,
+      time: '08:30 AM',
+      timeId: '0830'
+    },{
+      id: 19,
+      time: '09:00 AM',
+      timeId: '0900'
+    },{
+      id: 20,
+      time: '09:30 AM',
+      timeId: '0930'
+    },{
+      id: 21,
+      time: '10:00 AM',
+      timeId: '1000'
+    },{
+      id: 22,
+      time: '10:30 AM',
+      timeId: '1030'
+    },{
+      id: 23,
+      time: '11:00 AM',
+      timeId: '1100'
+    },{
+      id: 24,
+      time: '11:30 AM',
+      timeId: '1130'
+    },{
+      id: 25,
+      time: '12:00 PM',
+      timeId: '0000'
+    },{
+      id: 26,
+      time: '12:30 PM',
+      timeId: '0030'
+    },{
+      id: 27,
+      time: '01:00 PM',
+      timeId: '1300'
+    },{
+      id: 28,
+      time: '01:30 PM',
+      timeId: '1330'
+    },{
+      id: 29,
+      time: '02:00 PM',
+      timeId: '1400'
+    },{
+      id: 30,
+      time: '02:30 PM',
+      timeId: '1430'
+    },{
+      id: 31,
+      time: '03:00 PM',
+      timeId: '1500'
+    },{
+      id: 32,
+      time: '03:30 PM',
+      timeId: '1530'
+    },{
+      id: 33,
+      time: '04:00 PM',
+      timeId: '1600'
+    },{
+      id: 34,
+      time: '04:30 PM',
+      timeId: '1630'
+    },{
+      id: 35,
+      time: '05:00 PM',
+      timeId: '1700'
+    },{
+      id: 36,
+      time: '05:30 PM',
+      timeId: '1730'
+    },{
+      id: 37,
+      time: '06:00 PM',
+      timeId: '1800'
+    },{
+      id: 38,
+      time: '06:30 PM',
+      timeId: '1830'
+    },{
+      id: 39,
+      time: '07:00 PM',
+      timeId: '1900'
+    },{
+      id: 40,
+      time: '07:30 PM',
+      timeId: '1930'
+    },{
+      id: 41,
+      time: '08:00 PM',
+      timeId: '2000'
+    },{
+      id: 42,
+      time: '08:30 PM',
+      timeId: '2030'
+    },{
+      id: 43,
+      time: '09:00 PM',
+      timeId: '2100'
+    },{
+      id: 44,
+      time: '09:30 PM',
+      timeId: '2130'
+    },{
+      id: 45,
+      time: '10:00 PM',
+      timeId: '2200'
+    },{
+      id: 46,
+      time: '10:30 PM',
+      timeId: '2230'
+    },{
+      id: 47,
+      time: '11:00 PM',
+      timeId: '2300'
+    },{
+      id: 48,
+      time: '11:30 PM',
+      timeId: '2330'
+    }
   ];
   row:any[]=[1,2,3,4,4,4,4,4,4,4,4]
   dates: any[] = [];
