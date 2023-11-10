@@ -23,26 +23,41 @@
     <div class="ms-4" (click)="nextWeek()">></div>
   </div>
 
+
   <!-- CALENDER VIEW -->
-  <div class="m-4 custom-calender">
-    <div class="row border-0 border-top ms-5 pt-3" *ngIf="dates.length">
-      <div class="col border-0" style="height: 40px"></div>
-      <div class="col border-0 fw-bold text-muted ps-0" style="height: 40px" *ngFor="let date of dates" >{{ date.date }}</div>
+  <div class="m-4">
+    <!-- Fixed Header Row -->
+    <div class="row border-0 border-top" *ngIf="dates.length" style="position: sticky; top: 0; background-color: white; z-index: 1;">
+        <div class="col border-0 pt-2" style="height: 60px;"></div>
+        <div class="col border-0 fw-bold text-muted ps-0 pt-2" style="height: 60px;" *ngFor="let date of dates">
+          <div>
+            {{ date.date }}
+          </div>
+          <div>
+            {{ date.days }}
+          </div>
+        </div>
+
     </div>
 
-  <div class="row " *ngFor="let time of times; let i = index">
-    <div class="col border-0 text-center" style="height: 40px" id="" >{{ i % 2 === 0 ? time.time : '' }}</div>
-    <div class="col border border-bottom-0 custom-border" style="height: 40px" id="{{dates[0].dateId + time.timeId}}"></div>
-    <div class="col border border-bottom-0 custom-border" style="height: 40px" id="{{dates[1].dateId + time.timeId}}"></div>
-    <div class="col border border-bottom-0 custom-border" style="height: 40px" id="{{dates[2].dateId + time.timeId}}"></div>
-    <div class="col border border-bottom-0 custom-border" style="height: 40px" id="{{dates[3].dateId + time.timeId}}"></div>
-    <div class="col border border-bottom-0 custom-border" style="height: 40px" id="{{dates[4].dateId + time.timeId}}"></div>
-    <div class="col border border-bottom-0 custom-border" style="height: 40px" id="{{dates[5].dateId + time.timeId}}"></div>
-    <div class="col border border-bottom-0 " style="height: 40px" id="{{dates[6].dateId + time.timeId}}"></div>
-  </div>
-  </div>
+    <!-- Calendar Content -->
+    <div class="slots custom-calender">
+      <div class="row " *ngFor="let time of times; let i = index">
+        <div class="col border-0 text-center" style="height: 40px">{{ i % 2 === 0 ? time.time : '' }}</div>
+        <div class="col border border-bottom-0 bg-light custom-border" style="height: 40px" id="{{dates[0].dateId + time.timeId}}"></div>
+        <div class="col border border-bottom-0 bg-light custom-border" style="height: 40px" id="{{dates[1].dateId + time.timeId}}"></div>
+        <div class="col border border-bottom-0 bg-light custom-border" style="height: 40px" id="{{dates[2].dateId + time.timeId}}"></div>
+        <div class="col border border-bottom-0 bg-light custom-border" style="height: 40px" id="{{dates[3].dateId + time.timeId}}"></div>
+        <div class="col border border-bottom-0 bg-light custom-border" style="height: 40px" id="{{dates[4].dateId + time.timeId}}"></div>
+        <div class="col border border-bottom-0 bg-light custom-border" style="height: 40px" id="{{dates[5].dateId + time.timeId}}"></div>
+        <div class="col border border-bottom-0 bg-light " style="height: 40px" id="{{dates[6].dateId + time.timeId}}"></div>
+    </div>
+    </div>
 
-  <div class="border shadow-lg text-center" style="height: 40px;width: 165.88px;">
+</div>
+
+
+  <div class="border shadow-lg" style="height: 40px;width: 162.13px;">
     <span class="">Abiram vj</span>
   </div>
 

@@ -277,10 +277,13 @@ d: any;
       const day = this.daysOfWeek[i];
       const date = currentDate.getDate();
       const month = currentDate.toLocaleString('default', { month: 'short' });
+
       var data = {
-        date: `${day} ${date}`,
+        date: `${day} `,
+        days: date < 10 ? `0${date}` : date,
         dateId: `${day}-${date}${currentDate.getMonth() + 1}${currentDate.getFullYear()}`
       }
+      console.log(data);
       this.dates.push(data);
       // this.dates[i] = `${day} ${month} ${date}`;
     }
