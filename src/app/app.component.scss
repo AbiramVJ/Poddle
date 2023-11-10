@@ -1,0 +1,279 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Creates 7 equal-width columns */
+  gap: 0px; /* Adjust the gap between columns as needed */
+}
+
+.grid-item {
+  border: 1px solid #333;
+  padding: 20px;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.calendar-container {
+  display: grid;
+  grid-template-columns: 50px auto;
+  grid-template-rows: auto;
+  gap: 1px 1px;
+  grid-template-areas:
+    ". header"
+    "timeslots-container main";
+}
+
+.weekdays,
+.daynumbers {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.weekdays {
+  background: rgb(83, 83, 83);
+  color: whitesmoke;
+}
+
+.daynumbers {
+  background: rgb(194, 194, 194);
+  min-height: 2em;
+}
+
+.daynumbers li {
+  border-right: 1px solid black;
+}
+
+.header {
+  background: rgb(224, 189, 156);
+  grid-area: header;
+}
+
+.timeslots-container {
+  background: lightblue;
+  grid-area: timeslots-container;
+  justify-items: left;
+}
+
+.timeslots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeslots li {
+  min-height: 60px;
+}
+
+.timeslots li::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  width: 100%;
+  height: 1px;
+  background: #afafaf;
+  z-index: 1;
+}
+
+.event-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /*
+  4 * 15 min intervals * 9 slots
+  4 * 9 = 27 */
+  grid-template-rows: repeat(36, 1fr);
+  background: rgb(222, 223, 231);
+  grid-area: main;
+  position: relative;
+  white-space: nowrap;
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 14.2%,
+    gray 14.3%
+  );
+}
+
+.event-name {
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 0.1px;
+  line-height: 15px;
+}
+
+.slot {
+  position: absolute;
+  /* overflow: hidden; */
+  background: rgb(66, 147, 223);
+  border-radius: 5px;
+  z-index: 2;
+  margin-top: 1px;
+  border-color: rgb(3, 155, 229);
+  outline: none;
+}
+
+.slot::before {
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+    0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12),
+    0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.slot::after {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: -webkit-calc(100% + 2px);
+  width: calc(100% + 2px);
+  height: -webkit-calc(100% + 2px);
+  height: calc(100% + 2px);
+  content: "";
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  pointer-events: none;
+  border: 1px solid #fff;
+}
+
+.event-status {
+  float: left;
+  border-left: 3px solid rgb(71, 235, 93);
+  height: 100%;
+}
+
+.slot-1 {
+  /* is based on duration */
+  height: 45px;
+
+  /* based on start time */
+  grid-row: 17;
+
+  /* based on day of week */
+  grid-column: 1;
+}
+
+.slot-2 {
+  height: 45px;
+}
+
+.slot-3 {
+  height: 75px;
+}
+
+.slot-4 {
+  color: red;
+}
+
+.on-resize {
+  opacity: 0.85;
+}
+
+.gridcell::after {
+  content: "";
+  border-right: #dadce0 1px solid;
+  position: relative;
+  /* padding-right: 12px; */
+  /* -webkit-box-sizing: border-box; */
+  /* box-sizing: border-box; */
+  -webkit-box-flex: 1 1 auto;
+  /* -webkit-flex: 1 1 auto; */
+  /* flex: 1 1 auto; */
+  height: 200%;
+}
+#Wednesday-8112023930{
+  background: red;
+}
+.custom-border{
+  border-right: 0px !important;
+}
+
+
+// calender css
+$app_color: #18bcbe;
+::ng-deep .ngb-dp-month:first-child .ngb-dp-week {
+  padding-left: .25rem;
+  border-bottom: 0;
+  border-radius: 0;
+  background-color: #ffffff!important;
+  margin-bottom: 8px;
+
+  .ngb-dp-weekday {
+    display: block;
+    visibility: hidden;
+  }
+
+  .ngb-dp-weekday:first-letter {
+    visibility: visible;
+    padding-left: 0.5rem !important;
+  }
+
+   .ngb-dp-day, .ngb-dp-week-number, .ngb-dp-weekday {
+    width: 2.7rem;
+    height: 2.0rem;
+    color: #000000 !important;
+    font-style: normal;
+
+  }
+  .small {
+    font-weight: 500;
+    font-size: 15px;
+  }
+}
+
+::ng-deep .ngb-dp-arrow-btn {
+  padding: 0 .25rem;
+  margin: 0 .5rem;
+  border: none;
+  background-color: #f5f0f0 !important;
+  z-index: 1;
+  color: $app_color;
+}
+
+::ng-deep .ngb-dp-header {
+  border-bottom: 0;
+  border-radius: .25rem .25rem 0 0;
+  padding-top: .25rem;
+  background: white !important;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+::ng-deep .ngb-datepicker.dropdown-menu {
+  padding: 0;
+  width: 20rem !important;
+}
+::ng-deep .dropdown-menu.show {
+  display: block !important;
+  width: 20rem !important;
+}
+
+.custom-calender {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 400px;
+}
+.custom-input{
+  color: white;
+  height: 0px;
+  padding: 0px;
+  position: relative;
+  z-index: -1;
+
+}
+// #ngbDatepicker{
+//   position: absolute;
+//   inset: 0px auto auto 0px;
+//   margin: 0px;
+//   transform: translate(621px, 80px);
+// }
+
