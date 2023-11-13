@@ -197,7 +197,12 @@ ul {
 .custom-border{
   border-right: 0px !important;
 }
-
+.card-button{
+  height: 20px;
+  width: 20px;
+  background-color: rgb(110, 110, 211);
+  border: 0;
+}
 
 // calender css
 $app_color: #18bcbe;
@@ -270,7 +275,10 @@ $app_color: #18bcbe;
   z-index: -1;
 
 }
-
+.full-calender{
+  overflow-x: scroll;
+  width: 1300px;
+}
 // #ngbDatepicker{
 //   position: absolute;
 //   inset: 0px auto auto 0px;
@@ -278,3 +286,7 @@ $app_color: #18bcbe;
 //   transform: translate(621px, 80px);
 // }
 
+.cis{
+  width: 1200px;
+  overflow-x: auto;
+}

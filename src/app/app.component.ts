@@ -239,6 +239,7 @@ headerDate:any =null;
 
   events:any[] = [];
 d: any;
+isCancel: { [id: string]: boolean } = {};
 
 
   constructor() {
@@ -317,6 +318,11 @@ d: any;
   }
   isRange(){
 
+  }
+
+  cancelMeeting(id: string) {
+    // Handle the cancellation logic
+    this.isCancel[id] = true;
   }
 
 

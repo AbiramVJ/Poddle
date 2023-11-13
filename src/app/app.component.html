@@ -25,11 +25,11 @@
 
 
   <!-- CALENDER VIEW -->
-  <div class="m-4">
+  <div class="m-4 cis ">
     <!-- Fixed Header Row -->
-    <div class="row border-0 border-top" *ngIf="dates.length" style="position: sticky; top: 0; background-color: white; z-index: 1;">
+    <div class="row border-0 border-top ms-1" *ngIf="dates.length" style="position: sticky; top: 0; background-color: white; z-index: 1;">
         <div class="col border-0 pt-2" style="height: 60px;"></div>
-        <div class="col border-0 fw-bold text-muted ps-0 pt-2" style="height: 60px;" *ngFor="let date of dates">
+        <div class="col border-0 fw-bold text-muted pt-2" style="height: 60px;" *ngFor="let date of dates">
           <div>
             {{ date.date }}
           </div>
@@ -42,24 +42,36 @@
 
     <!-- Calendar Content -->
     <div class="slots custom-calender">
-      <div class="row " *ngFor="let time of times; let i = index">
+      <div class="row" *ngFor="let time of times; let i = index">
         <div class="col border-0 text-center" style="height: 40px">{{ i % 2 === 0 ? time.time : '' }}</div>
-        <div class="col border border-bottom-0 bg-light custom-border" style="height: 40px" id="{{dates[0].dateId + time.timeId}}"></div>
-        <div class="col border border-bottom-0 bg-light custom-border" style="height: 40px" id="{{dates[1].dateId + time.timeId}}"></div>
-        <div class="col border border-bottom-0 bg-light custom-border" style="height: 40px" id="{{dates[2].dateId + time.timeId}}"></div>
-        <div class="col border border-bottom-0 bg-light custom-border" style="height: 40px" id="{{dates[3].dateId + time.timeId}}"></div>
-        <div class="col border border-bottom-0 bg-light custom-border" style="height: 40px" id="{{dates[4].dateId + time.timeId}}"></div>
-        <div class="col border border-bottom-0 bg-light custom-border" style="height: 40px" id="{{dates[5].dateId + time.timeId}}"></div>
-        <div class="col border border-bottom-0 bg-light " style="height: 40px" id="{{dates[6].dateId + time.timeId}}"></div>
+        <div class="col border border-bottom-0 p-0 bg-light custom-border" style="height: 40px" id="{{dates[0].dateId + time.timeId}}">
+          <div class="d-flex" [ngClass]="{'d-none': isCancel[dates[0].dateId + time.timeId]}" >
+            <div class="">
+              <div class="small ps-2">Cancel</div>
+              <div class="small fw-bold ps-2">Abiram vj</div>
+            </div>
+            <button (click)="cancelMeeting(dates[0].dateId + time.timeId)" class="card-button ms-auto rounded-pill mt-2 me-1 text-center d-flex align-items-center justify-content-center">
+              <small class="text-white" >x</small>
+            </button>
+          </div>
+        </div>
+        <div class="col border border-bottom-0 p-0 bg-light custom-border" style="height: 40px" id="{{dates[1].dateId + time.timeId}}">
+
+        </div>
+        <div class="col border border-bottom-0 p-0 bg-light custom-border" style="height: 40px" id="{{dates[2].dateId + time.timeId}}">
+
+        </div>
+        <div class="col border border-bottom-0 p-0 bg-light custom-border" style="height: 40px" id="{{dates[3].dateId + time.timeId}}"></div>
+        <div class="col border border-bottom-0 p-0 bg-light custom-border" style="height: 40px" id="{{dates[4].dateId + time.timeId}}"></div>
+        <div class="col border border-bottom-0 p-0 bg-light custom-border" style="height: 40px" id="{{dates[5].dateId + time.timeId}}"></div>
+        <div class="col border border-bottom-0 p-0 bg-light " style="height: 40px" id="{{dates[6].dateId + time.timeId}}"></div>
     </div>
     </div>
 
 </div>
 
 
-  <div class="border shadow-lg" style="height: 40px;width: 162.13px;">
-    <span class="">Abiram vj</span>
-  </div>
+
 
 
 
